@@ -1,9 +1,9 @@
 import os
 
-from llama_index import ServiceContext, set_global_service_context
-from llama_index.llms import OpenAI
-from llama_index.query_engine.router_query_engine import RouterQueryEngine
-from indexing import get_query_engine_tool
+from llama_index.core import ServiceContext, set_global_service_context
+from llama_index.llms import OpenAI #type: ignore
+from llama_index.core.query_engine.router_query_engine import RouterQueryEngine
+from indexing import get_query_engine_tool #type: ignore
 
 # setup a global service context
 llm = OpenAI(model="gpt-3.5-turbo-16k", temperature=0, max_tokens=512)

@@ -1,20 +1,20 @@
 import os
-import nest_asyncio
+import nest_asyncio #type:ignore
 nest_asyncio.apply()
 
 from .markdown_docs_reader import MarkdownDocsReader
-from llama_index import (
+from llama_index.core import (
     SimpleDirectoryReader, 
     VectorStoreIndex,
     StorageContext, 
     load_index_from_storage
 )
-from llama_index.query_engine import RetrieverQueryEngine
-from llama_index.node_parser import HierarchicalNodeParser, get_leaf_nodes
-from llama_index.retrievers import AutoMergingRetriever
-from llama_index.schema import Document, MetadataMode
-from llama_index.storage.docstore import SimpleDocumentStore
-from llama_index.tools import QueryEngineTool, ToolMetadata 
+from llama_index.core.query_engine import RetrieverQueryEngine
+from llama_index.core.node_parser import HierarchicalNodeParser, get_leaf_nodes
+from llama_index.core.retrievers import AutoMergingRetriever
+from llama_index.core.schema import Document, MetadataMode
+from llama_index.core.storage.docstore import SimpleDocumentStore
+from llama_index.core.tools import QueryEngineTool, ToolMetadata 
 
 
 # load documents

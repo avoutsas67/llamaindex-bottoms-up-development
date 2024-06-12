@@ -1,7 +1,7 @@
 from typing import Callable, Optional
 
-from llama_index.utils import globals_helper
-from llama_index.schema import MetadataMode
+from llama_index.core.utils import globals_helper
+from llama_index.core.schema import MetadataMode
 
 class LimitRetrievedNodesLength:
 

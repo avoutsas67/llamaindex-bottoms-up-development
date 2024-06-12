@@ -1,0 +1,36 @@
+[project]
+name = "llamaindex-bottoms-up-development"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Achilleas Voutsas", email = "achilleas.voutsas@ema.europa.eu"},
+]
+dependencies = [
+    "llama-index>=0.10.28",
+    "python-dotenv>=1.0.1",
+    "pandas[jinja2]>=2.2.2",
+    "spacy>=3.7.4",
+    "llama-index-readers-web>=0.1.8",
+    "llama-index-embeddings-openai>=0.1.10",
+    "InstructorEmbedding>=1.0.1",
+    "torch>=2.3.1",
+    "transformers>=4.41.2",
+    "llama-index-readers-file>=0.1.23",
+    "sentence-transformers==2.2.0",
+    "scipy>=1.13.1",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "wheel>=0.43.0",
+    "mypy>=1.9.0",
+    "ipykernel>=6.29.4",
+    "pandas-stubs>=2.2.1.240316",
+]
